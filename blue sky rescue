@@ -1,0 +1,99 @@
+ (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
+diff --git a/index.html b/index.html
+index 95f1fc2ba6cb1b6c8bc37a6a80c1da39d687e4d6..658787bde028ccfb566cb83096cc2bfde1b6c943 100644
+--- a/index.html
++++ b/index.html
+@@ -1,35 +1,74 @@
+ <!DOCTYPE html>
+ <html lang="zh-CN">
+ <head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+-  <title>TED Talks 互动介绍</title>
++  <title>蓝天救援队 Blue Sky Rescue</title>
+   <link rel="stylesheet" href="styles.css" />
+ </head>
+ <body>
++  <header class="hero">
++    <div class="hero-content">
++      <p class="eyebrow">公益救援 · Volunteer Rescue</p>
++      <h1>蓝天救援队 <span>Blue Sky Rescue</span></h1>
++      <p class="hero-text">
++        蓝天救援队是一支民间公益救援组织。队员们用专业训练、团队合作和志愿精神，
++        在危险时刻帮助需要帮助的人。
++      </p>
++    </div>
++  </header>
++
+   <main class="page">
+-    <section class="hero">
+-      <p class="tag">Ideas Worth Spreading</p>
+-      <h1>TED Talks 互动介绍</h1>
+-      <p class="description">
+-        TED Talks 汇聚了来自科技、教育、设计、文化、商业等领域的精彩演讲。
+-        通过短小而有启发性的演讲，人们可以了解新观点、发现新灵感，并思考世界的更多可能性。
++    <section class="intro card">
++      <h2>简介 Introduction</h2>
++      <p>
++        蓝天救援队关注生命安全，参与灾害救援、应急培训和安全教育。
++        他们来自不同职业，却有同一个目标：保护生命，传递希望。
+       </p>
++    </section>
+ 
+-      <div class="card">
+-        <h2>为什么 TED Talks 受欢迎？</h2>
+-        <ul>
+-          <li>内容简洁，适合快速了解一个主题。</li>
+-          <li>演讲者来自不同领域，观点丰富多元。</li>
+-          <li>适合学习英语、提升表达能力和拓展视野。</li>
+-        </ul>
++    <section class="work-section">
++      <h2>主要工作 Main Work</h2>
++      <div class="card-grid">
++        <article class="card work-card">
++          <div class="icon">🌊</div>
++          <h3>自然灾害救援</h3>
++          <p>在洪水、地震、台风等灾害中开展搜救和支援。</p>
++        </article>
++        <article class="card work-card">
++          <div class="icon">🩺</div>
++          <h3>急救知识普及</h3>
++          <p>教授 CPR、止血、包扎等基础急救技能。</p>
++        </article>
++        <article class="card work-card">
++          <div class="icon">🏫</div>
++          <h3>校园安全教育</h3>
++          <p>帮助学生学习避险逃生和安全自护方法。</p>
++        </article>
++        <article class="card work-card">
++          <div class="icon">🤝</div>
++          <h3>社区应急培训</h3>
++          <p>提升社区居民面对突发事件的应对能力。</p>
++        </article>
+       </div>
++    </section>
++
++    <section class="spirit card">
++      <h2>志愿精神 Volunteer Spirit</h2>
++      <p class="quote">help yourself by helping others</p>
++      <p>
++        帮助别人，也是帮助自己成长。每一次伸出援手，都会让我们的社会更温暖、更安全。
++      </p>
++    </section>
+ 
+-      <button id="checkButton" type="button">点击测试页面</button>
+-      <p id="message" class="message" aria-live="polite"></p>
++    <section class="interaction card">
++      <h2>课堂互动 Class Interaction</h2>
++      <p>点击按钮，学习三句适合课堂展示的英文表达。</p>
++      <button id="rescueButton" type="button">显示救援精神</button>
++      <p id="rescueMessage" class="message" aria-live="polite"></p>
+     </section>
+   </main>
+ 
+   <script src="script.js"></script>
+ </body>
+ </html>
+ 
+EOF
+)
