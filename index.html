@@ -28,6 +28,27 @@
       <button id="checkButton" type="button">点击测试页面</button>
       <p id="message" class="message" aria-live="polite"></p>
     </section>
+
+    <section class="vocabulary card" aria-labelledby="vocabulary-title">
+      <p class="tag">English Classroom</p>
+      <h2 id="vocabulary-title">Vocabulary Learning</h2>
+      <p class="vocabulary-intro">通过 TED Talks 主题词汇，积累实用英语表达。</p>
+      <div class="word-panel">
+        <p class="word-index" id="wordIndex" aria-live="polite"></p>
+        <h3 id="word" class="word"></h3>
+        <p id="pronunciation" class="pronunciation"></p>
+        <p id="partOfSpeech" class="part-of-speech"></p>
+        <p id="meaning" class="meaning"></p>
+        <div class="example-box">
+          <span>Example</span>
+          <p id="example" class="example"></p>
+        </div>
+      </div>
+      <div class="vocabulary-controls">
+        <button id="previousWord" type="button">← 上一个</button>
+        <button id="nextWord" type="button">下一个 →</button>
+      </div>
+    </section>
   </main>
 
   <script src="script.js"></script>
